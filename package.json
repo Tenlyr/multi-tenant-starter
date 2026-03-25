@@ -1,18 +1,19 @@
-import { Tenlyr } from "@tenlyr/sdk";
-
-if (!process.env.TENLYR_ADMIN_KEY) {
-  throw new Error(
-    "\n⛔  TENLYR_ADMIN_KEY is not set.\n" +
-    "   1. Copy .env.example → .env\n" +
-    "   2. Get a free key at https://tenlyr.com\n" +
-    "   3. Paste it in and run again.\n"
-  );
+{
+  "name": "multi-tenant-starter",
+  "version": "1.0.0",
+  "description": "Minimal demo: multi-tenant data isolation without writing tenant filters in queries",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "provision": "ts-node scripts/provision.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  }
 }
-
-// One shared client — injected wherever needed
-export const tenlyr = new Tenlyr({
-  apiKey: process.env.TENLYR_ADMIN_KEY,
-  baseUrl: process.env.TENLYR_BASE_URL ?? "https://api.tenlyr.app",
-  timeout: 10_000,
-  retries: 3,
-});
