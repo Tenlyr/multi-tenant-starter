@@ -1,6 +1,6 @@
 # multi-tenant-starter
 
->  Multi-tenant data isolation — **without writing a single tenant filter in your queries.**
+>  Multi-tenant data isolation - **without writing a single tenant filter in your queries.**
 
 ---
 
