@@ -1,6 +1,6 @@
 # multi-tenant-starter
 
-> Multi-tenant data isolation — **without writing a single tenant filter in your queries.**
+> Multi-tenant data isolation - **without writing a single tenant filter in your queries.**
 
 ---
 
@@ -22,8 +22,8 @@ That's not a fix. That's a time bomb.
 
 This repo proves a better model: **tenant context is resolved once, at the boundary**, and the rest of your code never has to think about it.
 
-- Tenant is extracted from the URL **or** a request header — one place, one time  
-- The data layer enforces isolation by construction — no filter, no leak  
+- Tenant is extracted from the URL **or** a request header - one place, one time  
+- The data layer enforces isolation by construction - no filter, no leak  
 - Route handlers are completely tenant-agnostic  
 
 ---
@@ -140,7 +140,7 @@ The isolation is structural, not a convention you have to remember.
 
 ## Swap the DB Layer
 
-The in-memory store is intentionally trivial. To use a real database, replace `src/lib/db.ts` — the rest of the app doesn't change.
+The in-memory store is intentionally trivial. To use a real database, replace `src/lib/db.ts` - the rest of the app doesn't change.
 
 With Postgres + Row Level Security, for example, `getData(tenant)` would set `SET app.tenant = $1` and let RLS policies handle the rest. Same guarantee. Production scale.
 
