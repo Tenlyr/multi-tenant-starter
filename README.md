@@ -32,7 +32,7 @@ This repo proves a better model: **tenant context is resolved once, at the bound
 
 ```bash
 # 1. Clone & install
-git clone https://github.com/your-org/multi-tenant-starter
+git clone https://github.com/Tenlyr/multi-tenant-starter
 cd multi-tenant-starter
 npm install
 
