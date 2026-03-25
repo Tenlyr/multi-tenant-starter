@@ -1,6 +1,6 @@
 # multi-tenant-starter
 
-> Multi-tenant data isolation — **without writing a single tenant filter in your queries.**
+> Multi-tenant data isolation - **without writing a single tenant filter in your queries.**
 
 ---
 
@@ -9,7 +9,7 @@
 Every multi-tenant app eventually has this bug:
 
 ```ts
-// Oops — forgot the tenant filter. Tenant A just saw Tenant B's data.
+// Oops - forgot the tenant filter. Tenant A just saw Tenant B's data.
 const items = await db.query('SELECT * FROM records');
 ```
 
@@ -72,7 +72,7 @@ curl -X POST http://localhost:3000/tenant/acme/data \
 curl http://localhost:3000/tenant/acme/data
 ```
 
-### Prove isolation — Tenant B sees nothing from Tenant A
+### Prove isolation - Tenant B sees nothing from Tenant A
 
 ```bash
 curl http://localhost:3000/tenant/globex/data
@@ -94,7 +94,7 @@ curl http://localhost:3000/debug/context \
 {
   "tenant": "acme",
   "count": 2,
-  "items": ["acme — first record", "acme — second record"]
+  "items": ["acme - first record", "acme - second record"]
 }
 
 // GET /tenant/globex/data
@@ -111,10 +111,10 @@ Different data. Same code. Zero tenant filters.
 
 ## How it works
 
-**Tenant context is resolved once, at the boundary** — the rest of your code never has to think about it.
+**Tenant context is resolved once, at the boundary** - the rest of your code never has to think about it.
 
-- Tenant is extracted from the URL **or** a request header — one place, one time  
-- The data layer enforces isolation by construction — no filter, no leak  
+- Tenant is extracted from the URL **or** a request header - one place, one time  
+- The data layer enforces isolation by construction - no filter, no leak  
 - Route handlers are completely tenant-agnostic  
 
 ---
@@ -160,7 +160,7 @@ scripts/
 
 ## Swap the DB Layer
 
-The in-memory store is intentionally trivial. To use a real database, replace `src/lib/db.ts` — the rest of the app doesn't change.
+The in-memory store is intentionally trivial. To use a real database, replace `src/lib/db.ts` - the rest of the app doesn't change.
 
 With Postgres + Row Level Security, for example, `getData(tenant)` would set `SET app.tenant = $1` and let RLS policies handle the rest. Same guarantee. Production scale.
 
