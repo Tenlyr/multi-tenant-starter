@@ -1,40 +1,6 @@
-# Ship your SaaS. Not infrastructure.
+# Get your free admin key at https://tenlyr.com (Starter plan: up to 5 tenants, no credit card)
+TENLYR_ADMIN_KEY=tenlyr_live_tf_your_key_here
 
-Enforce multi-tenant isolation  
-without relying on developers to remember filters.
-
-## The problem
-
-Most SaaS apps:
-
-- rely on tenant_id filters  
-- break when one query misses it  
-- leak data silently  
-
-## What this does
-
-- resolve tenant from request  
-- inject context automatically  
-- enforce isolation at query level  
-
-## Example
-
-Tenant A → sees only A data  
-Tenant B → sees only B data  
-
-No filters required in queries.
-
-## Demo
-
-createTenant("acme")
-
-✔ Tenant created  
-✔ Context set  
-✔ Data isolated  
-✔ Ready in <200ms
-
-## Quick start
-
-```bash
-npm install
-npm run dev
+# Optional — defaults shown
+TENLYR_BASE_URL=https://api.tenlyr.app
+PORT=3000

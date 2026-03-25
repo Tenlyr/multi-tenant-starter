@@ -1,0 +1,18 @@
+import { Tenlyr } from "@tenlyr/sdk";
+
+if (!process.env.TENLYR_ADMIN_KEY) {
+  throw new Error(
+    "\n⛔  TENLYR_ADMIN_KEY is not set.\n" +
+    "   1. Copy .env.example → .env\n" +
+    "   2. Get a free key at https://tenlyr.com\n" +
+    "   3. Paste it in and run again.\n"
+  );
+}
+
+// One shared client — injected wherever needed
+export const tenlyr = new Tenlyr({
+  apiKey: process.env.TENLYR_ADMIN_KEY,
+  baseUrl: process.env.TENLYR_BASE_URL ?? "https://api.tenlyr.app",
+  timeout: 10_000,
+  retries: 3,
+});
