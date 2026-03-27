@@ -3,6 +3,11 @@
 >  Multi-tenant data isolation - **without writing a single tenant filter in your queries.**
 
 ---
+![npm](https://img.shields.io/npm/v/@tenlyr/sdk)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Provision time](https://img.shields.io/badge/provision%20time-187ms-brightgreen)
+
+> ⭐ If this saves you from a tenant data leak, star it.
 
 ## The Problem
 
@@ -170,7 +175,47 @@ Multi-tenancy shouldn't depend on developers remembering things.
 It should be enforced by design.
 
 ---
+## Ready for production?
+
+This starter shows the pattern. 
+Tenlyr gives you the full infrastructure:
+
+| This starter | Tenlyr |
+|---|---|
+| In-memory store | Real Postgres + RLS |
+| Manual provisioning | 187ms automated provisioning |
+| No billing | Stripe sync built-in |
+| No monitoring | Per-tenant health dashboard |
+| Demo only | Production-ready |
+
+→ **[Start free at tenlyr.com](https://tenlyr.com)** — 
+provision your first real tenant in 30 minutes.
+
 
 ## License
-
 MIT
+
+---
+
+Built by [Rajesh Ayyavu](https://linkedin.com/in/rajesh-ayyavu) 
+· [tenlyr.com](https://tenlyr.com) 
+· [Follow for more multi-tenancy content](https://linkedin.com/in/rajesh-ayyavu)
+```
+
+---
+
+## What stays exactly as-is ✅
+
+- The problem statement — perfect
+- The curl demo — brilliant, very dev-friendly
+- "The Key Insight" section — this is your best writing, don't touch it
+- Project structure — clean and clear
+- "Swap the DB Layer" — great for credibility
+
+---
+
+## Summary — 3 small changes, big impact
+```
+1. Add badges + star nudge    → top of file
+2. Add "Ready for production" → bridge to Tenlyr
+3. Add footer with your name  → personal brand connection
