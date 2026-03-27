@@ -202,20 +202,3 @@ Built by [Rajesh Ayyavu](https://linkedin.com/in/rajesh-ayyavu)
 · [Follow for more multi-tenancy content](https://linkedin.com/in/rajesh-ayyavu)
 ```
 
----
-
-## What stays exactly as-is ✅
-
-- The problem statement — perfect
-- The curl demo — brilliant, very dev-friendly
-- "The Key Insight" section — this is your best writing, don't touch it
-- Project structure — clean and clear
-- "Swap the DB Layer" — great for credibility
-
----
-
-## Summary — 3 small changes, big impact
-```
-1. Add badges + star nudge    → top of file
-2. Add "Ready for production" → bridge to Tenlyr
-3. Add footer with your name  → personal brand connection
