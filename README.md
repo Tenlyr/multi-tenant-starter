@@ -197,8 +197,7 @@ MIT
 
 ---
 
-Built by [Rajesh Ayyavu](https://linkedin.com/in/rajesh-ayyavu) 
+Built by 
 · [tenlyr.com](https://tenlyr.com) 
 · [Follow for more multi-tenancy content](https://linkedin.com/in/rajesh-ayyavu)
-```
 
